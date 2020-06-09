@@ -1,2 +1,15 @@
-<h1>Doctors#edit</h1>
-<p>Find me in app/views/doctors/edit.html.erb</p>
+<h1>Edit Doctor</h1>
+
+<%= form_with(model: @doctor, local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, required: true, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, required: true %>
+  </div>
+
+  <%= f.submit nil, class: 'ui green button' %>
+<% end %>

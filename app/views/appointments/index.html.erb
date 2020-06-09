@@ -2,5 +2,8 @@
 
 <% @appointments.each do |appointment| %>
   <%= link_to appointment.user, [@doctor, @users] %>
-
 <% end %>
+
+<ul>
+<%= link_to 'Add Appointment', new_doctor_appointment_path(@doctor) %>
+</ul>

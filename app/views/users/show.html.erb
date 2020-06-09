@@ -9,6 +9,11 @@
     <li>
       <%= link_to doctor.name, doctor %>
     </li>
+    <% end %>
+</ul>
+<ul>
+    <% @user.appointments.each do |appointment| %>
+      <%= link_to appointment.date, appointment %>
   <% end %>
 </ul>
 <br />
