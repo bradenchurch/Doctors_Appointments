@@ -5,11 +5,11 @@
     <%= f.label :date %>
     <%= f.datetime_field :date, pressence: true %>
   </div>
-  <div class="field">
-    <%= f.label :type %>
-    <%= f.text_field :type, presence: true %>
-  </div>
   <br />
+</div>
+<div class="field">
+<%= f.label :user %>
+<%= f.select :user_id, @users.collect { |u| [u.full_name, u.id] } %>
 </div>
 <br />
   <%= f.submit nil, class: "ui blue button" %>
