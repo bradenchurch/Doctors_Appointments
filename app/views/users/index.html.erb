@@ -1,5 +1,9 @@
-<h1>Users</h1>
+<h1 class="ui center aligned icon header">
+  <i class="plus square outline icon"></i>
+  Users
+</h1>
 <ul>
+
   <% @users.each do |user| %>
     <li>
       <%= link_to user.full_name, user %>
